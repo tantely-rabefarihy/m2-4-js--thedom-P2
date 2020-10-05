@@ -9,6 +9,11 @@
 
 const addNumbers = (...nums) => {
   // Insert missing solution please
+  let squaredNum = [];
+  return nums.map(function (item) {
+    return squaredNum.push(item * item);
+  });
+  return squaredNum;
 };
 
 // Part 2 - Test

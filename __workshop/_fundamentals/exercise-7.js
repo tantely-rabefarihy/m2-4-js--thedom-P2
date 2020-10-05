@@ -15,6 +15,13 @@
 
 const addValues = (arr, obj) => {
   // Insert missing solution please
+  return arr.map(function (objectArray) {
+    if (typeof obj !== "object") {
+      return arr;
+    } else {
+      return Object.assign(objectArray, obj);
+    }
+  });
 };
 
 // Part 2 - Test

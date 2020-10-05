@@ -13,6 +13,14 @@
 
 function isPalindrome(theString) {
   // Your code here
+  const alphanumericOnly = theString
+    // 1) Lowercase the input
+    .toLowerCase()
+    // 2) Strip out non-alphanumeric characters
+    .match(/[a-z0-9]/g);
+
+  // 3) return string === reversedString
+  return alphanumericOnly.join("") === alphanumericOnly.reverse().join("");
 }
 
 // Part 2 - Test

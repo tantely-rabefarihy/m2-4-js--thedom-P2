@@ -9,6 +9,22 @@ test("Exercise 3", () => {
     { name: "Bob", isAvailable: false },
     { name: "Josie", isAvailable: false },
   ]);
+  expect(
+    insert([{ name: "Mag" }, { name: "Tant" }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Mag", isAvailable: false },
+    { name: "Tant", isAvailable: false },
+  ]);
+  expect(insert([{ name: "Bob" }, { name: "Josie" }], true)).toStrictEqual([
+    { name: "Bob", name: "Josie" },
+  ]);
+  expect(
+    insert([{ name: "Peter" }, { name: "Parker" }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Peter", isAvailable: false },
+    { name: "Parker", isAvailable: false },
+  ]);
+
   // add more tests here...
 });
 

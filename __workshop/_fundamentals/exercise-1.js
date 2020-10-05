@@ -7,6 +7,10 @@
 
 const convertToString = (arr) => {
   // Insert missing solution please
+  let toString = arr.toString();
+let transform = toString.split(",");
+return transform;
+   
 };
 
 // Part 2 - Test
@@ -14,6 +18,15 @@ const convertToString = (arr) => {
 // Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.
-
+test("Exercise 1", () => {
+  expect(convertToString([1, 2, 3, 4, 5])).toStrictEqual([
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+  ]);
+  // add more tests here...
+});
 // We need to export the function in order for our unit test to have access to it.
 module.exports = convertToString;
